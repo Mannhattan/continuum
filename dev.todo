@@ -1,0 +1,26 @@
+☐ pipelines list (short description, go to config)
+
+
+
+Functions:
+    ☐ manage images (delete, list, sort, create (steps/commands before creating, steps/commands after creating, etc.))
+    ☐ manage containers (stop, start, restart, add (env variables, name, image (from list or name from dockerhub), how many times), remove, list, sort)
+    pipelines:
+        ☐ add new (create new pipeline - name - from github repo - trigger mode: from push/manual)
+        ☐ tests
+        build => tests => deploy to production
+
+
+
+
+.NET CORE 2 approach to pipelines:
+    - push new version to master branch =>
+    - pull latest version from master branch =>
+    - restore dependencies, build and test app =>
+    - publish app (dotnet publish) =>
+    - push bundled app to release branch
+
+
+settings:
+    - port and ip which continuum is running on
+    

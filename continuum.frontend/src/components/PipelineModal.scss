@@ -1,0 +1,185 @@
+@import "../Common.scss";
+
+div.pipeline_modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: rgba($color: #000000, $alpha: .4);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    div.container {
+        width: 800px;
+        height: 350px;
+
+        background: #fff;
+        border-radius: 3px;
+        overflow: hidden;
+
+        div.modal_banner {
+            width: 100%;
+            // height: 230px;
+            position: relative;
+            // padding-right: 100px;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+
+            &.success {
+                background: $positive-color;
+            }
+
+            &.failure {
+                background: $negative-color;
+            }
+
+            a.close {
+                width: 30px;
+                height: 30px;
+                color: #fff;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                z-index: 5;
+                transition: .2s ease-in-out;
+
+                &:hover {
+                    transition: .2s ease-in-out;
+                    opacity: .7;
+                }
+
+                svg {
+                    width: 30px !important;
+                    height: 30px !important;
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+
+            div.modal_menu {
+                width: 100%;
+                margin-top: 10px;
+
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+
+                a.link {
+                    display: block;
+                    line-height: 30px;
+                    padding: 0 20px;
+                    border-bottom: 2px solid transparent;
+                    text-decoration: none;
+                    font-family: $font-blender;
+                    font-size: 1.2em;
+                    font-weight: 100;
+                    color: #fff;
+
+                    &.active {
+                        border-bottom: 4px solid #fff;
+                    }
+                }
+            }
+
+            svg {
+                width: 80px !important;
+                height: 80px !important;
+                margin: 0 70px;
+                color: #fff;
+            }
+
+            h2 {
+                font-family: $font-blender;
+                font-size: 1.5em;
+                font-weight: 100;
+                text-align: left;
+                color: #fff;
+                padding: 30px 20px 5px 0;
+
+                svg {
+                    width: 20px !important;
+                    height: 20px !important;
+                    margin: 0;
+                    margin-right: 10px;
+                }
+            }
+        
+            h3 {
+                font-family: $font-blender;
+                font-size: 1.5em;
+                font-weight: 100;
+                text-align: left;
+                color: #fff;
+                padding: 5px 20px 5px 0;
+                font-weight: bold;
+        
+                span {font-weight: 100;}
+
+                svg {
+                    width: 20px !important;
+                    height: 20px !important;
+                    margin: 0;
+                    margin-right: 10px;
+                }
+            }
+
+            h4 {
+                font-family: $font-blender;
+                font-size: 1.5em;
+                font-weight: 100;
+                text-align: left;
+                color: #fff;
+                padding: 5px 20px 5px 0;
+
+                &:last-of-type {
+                    padding: 5px 20px 30px 0;
+                }
+        
+                span {font-weight: 100;}
+
+                svg {
+                    width: 20px !important;
+                    height: 20px !important;
+                    margin: 0;
+                    margin-right: 10px;
+                }
+            }
+
+            a.modal_action {
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                padding: 10px 20px;
+                margin: 12px 20px;
+                border: 2px solid #fff;
+                border-radius: 3px;
+                text-align: center;
+                font-family: $font-quicksand;
+                font-size: 1em;
+                font-weight: 600;
+
+                &:hover {
+                    transition: .2s ease-in-out;
+                    background: #fff;
+                    color: #000;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

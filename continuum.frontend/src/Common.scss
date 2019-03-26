@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Nova Flat';
+    src: url('./../fonts/NovaFlat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('./../fonts/Quicksand-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BlenderProBook';
+    src: url('./../fonts/Blender-Pro-Book.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//fonts
+$font-nova: 'Nova Flat', cursive;
+$font-quicksand: 'Quicksand', sans-serif;
+$font-blender: 'BlenderProBook', sans-serif;
+
+// $accent-color-first: #3498DB;
+// $accent-color-second: rgb(71,225,12);
+
+$main-color: #3498DB;
+$positive-color: #5BA504; //2ecc71; //#5BA504
+$negative-color: #e74c3c;
+
+section.content {
+    width: calc(100% - 300px);
+    min-height: 100vh;
+    float: right;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    div.header {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        h1 {
+            // width: 100%;
+            // display: block;
+            font-family: $font-blender;
+            font-size: 2em;
+            font-weight: 100;
+            text-align: left;
+            color: $main-color;
+            // color: #fff;
+            // background: $main-color;
+            // margin-bottom: 30px;
+            // padding: 5px 20px;
+            // margin: 15px 30px;
+            // border-radius: 5px;
+            padding: 15px 30px;
+            // width: auto;
+        }
+
+        .button {
+            text-decoration: none;
+            width: auto;
+            color: #fff;
+            font-family: $font-quicksand;
+            font-size: 1em;
+            font-weight: 100;
+            background: $main-color;
+            margin-right: 30px;
+            padding: 10px 25px;
+            border-radius: 3px;
+            box-shadow: 0 0px 6px rgba($color: #000, $alpha: .16), 0 3px 6px rgba($color: #000, $alpha: .23);
+            transition: .2s ease-in-out;
+    
+            &:hover {
+                transition: .2s ease-in-out;
+                box-shadow: none;
+                transform: translateY(2px);
+                cursor: pointer;
+            }
+        }
+    }
+}

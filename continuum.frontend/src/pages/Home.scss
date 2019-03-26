@@ -1,0 +1,48 @@
+@import "../Common.scss";
+
+section.landing {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    background: #3498DB;
+
+    svg {
+        width: 300px !important;
+        height: auto !important;
+        color: #fff;
+    }
+
+    img {
+        width: 300px;
+        height: auto;
+        // margin-bottom: 30px;
+    }
+
+    a.login {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        // background: #3498DB;
+        padding: 9px 30px;
+        border: 2px solid #fff;
+        border-radius: 4px;
+
+        font-family: $font-blender;
+        font-size: 1.2em;
+        font-weight: 100;
+        transition: .2s ease-in-out;
+
+        &:hover {
+            transition: .2s ease-in-out;
+            background: #fff;
+            color: #3498DB;
+        }
+    }
+}
