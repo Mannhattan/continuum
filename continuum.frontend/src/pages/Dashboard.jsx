@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import "./Dashboard.scss";
+import Menu from './../organisms/Menu.jsx';
+import SectionContent from './../atoms/SectionContent';
+import ContentHeader from './../atoms/ContentHeader';
+import HeaderTitle from './../atoms/HeaderTitle';
 
-import Menu from './../components/Menu.jsx';
+import Button from './../atoms/Button';
 
 class Dashboard extends Component {
     render() {
@@ -10,14 +14,17 @@ class Dashboard extends Component {
             <div>
                 <Menu dashboard/>
             
-                <section className="content dashboard">
-                    <div className="header">
-                        <h1>Dashboard</h1>
-                    </div>
-                </section>
+                <SectionContent>
+                    <ContentHeader>
+                        <HeaderTitle>Dashboard</HeaderTitle>
+                        <Button primary margin="0 20px">Test view</Button>
+                    </ContentHeader>
+                </SectionContent>
             </div>
         );
     }
 }
+
+
 
 export default Dashboard;
