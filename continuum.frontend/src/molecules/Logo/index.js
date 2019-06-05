@@ -13,16 +13,19 @@ const LogoWrapper = styled.div`
     margin: ${props => props.margins ? props.margins : null};
 `
 
-const Image = styled.img.attrs({
-    src: (signet)
-})`
+// .attrs({
+//     src: (signet)
+// })
+
+const Image = styled.img`
     width: ${props => props.big ? "58px" : "38px"};
     height: auto;
 `
 
+// BlenderProBook 3.4em 2.5em
 const H1 = styled.h1`
-    font-family: 'BlenderProBook';
-    font-size: ${props => props.big ? "3.4em" : "2.5em"};
+    font-family: 'Nova Flat';
+    font-size: ${props => props.big ? "2.9em" : "2.5em"};
     color: #fff;
     font-weight: 600;
 `
@@ -30,7 +33,7 @@ const H1 = styled.h1`
 const Logo = ({ margins, big }) => {
     return (
         <LogoWrapper margins={margins}>
-            <Image big={big} />
+            <Image big={big} src={signet} />
             <H1 big={big}>ontinuum</H1>
         </LogoWrapper>
     )

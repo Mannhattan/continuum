@@ -2,23 +2,18 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Menu from './../organisms/Menu.jsx';
-import SectionContent from './../atoms/SectionContent';
-import ContentHeader from './../atoms/ContentHeader';
-import HeaderTitle from './../atoms/HeaderTitle';
+import TopMenu from './../organisms/TopMenu.jsx';
 
-import Button from './../atoms/Button';
+import SectionContent from './../atoms/SectionContent';
 
 class Dashboard extends Component {
     render() {
         return (
             <div>
                 <Menu dashboard/>
-            
+
                 <SectionContent>
-                    <ContentHeader>
-                        <HeaderTitle>Dashboard</HeaderTitle>
-                        <Button primary margin="0 20px">Test view</Button>
-                    </ContentHeader>
+                    <TopMenu title="Dashboard" profileName="mannhattan" />
                 </SectionContent>
             </div>
         );

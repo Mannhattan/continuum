@@ -20,11 +20,14 @@ class Menu extends Component {
 
                 <NavigationLink href="/dashboard" className={this.props.dashboard ? "item-selected" : null}><i className="fas fa-th"></i> Dashboard</NavigationLink>
                 <NavigationLink href="/pipelines" className={this.props.pipelines ? "item-selected" : null}><i className="fas fa-sync-alt"></i> Pipelines</NavigationLink>
-                <NavigationLink href="/containers" className={this.props.containers ? "item-selected" : null}><i className="fas fa-box-open"></i> Containers</NavigationLink>
-                <NavigationLink href="/images" className={this.props.images ? "item-selected" : null}><i className="fas fa-cube"></i> Images</NavigationLink>
+                {/* <i className="fas fa-cube"></i> */}
+                <NavigationLink href="/containers" className={this.props.containers ? "item-selected" : null}><i className="fas fa-boxes"></i> Containers</NavigationLink>
+                <NavigationLink href="/images" className={this.props.images ? "item-selected" : null}><i className="fas fa-box-open"></i> Images</NavigationLink>
                 {/* <a href="/boards" className={this.props.boards ? "menu-item item-selected" : "menu-item"}><i class="fab fa-trello"></i> Boards</a> */}
                 <NavigationLink href="/settings" className={this.props.settings ? "item-selected" : null}><i className="fas fa-cog"></i> Settings</NavigationLink>
-                <NavigationLink href="" onClick={(e) => this.logout(e)} className="menu-item"><i className="fas fa-sign-out-alt"></i> Logout</NavigationLink>
+                <NavigationLink href="" onClick={(e) => this.logout(e)}><i className="fas fa-sign-out-alt"></i> Logout</NavigationLink>
+
+                <Coffee href="https://github.com/mannhattan" target="_blank"><i className="fas fa-mug-hot"></i> Buy me a coffee</Coffee>
             </Navigation>
         );
     }
@@ -76,6 +79,22 @@ const NavigationLink = styled.a`
         width: 18px !important;
         height: auto !important;
         margin-right: 10px;
+    }
+`
+
+const Coffee = styled.a`
+    display: block;
+    width: 300px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    font-family: 'BlenderProBook';
+    font-size: 1em;
+    text-align: center;
+
+    svg {
+        margin-right: 5px;
     }
 `
 

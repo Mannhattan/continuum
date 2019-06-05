@@ -9,3 +9,11 @@ Automatic builds and containerization (based on github webhooks).
 ```shell
     git pull https://github.com/Mannhattan/continuum.git
 ```
+
+### Screenshots
+
+Login page:
+![alt text](https://raw.githubusercontent.com/mannhattan/continuum/master/screenshots/1.png)
+
+Pipelines:
+![alt text](https://raw.githubusercontent.com/mannhattan/continuum/master/screenshots/2.png)
