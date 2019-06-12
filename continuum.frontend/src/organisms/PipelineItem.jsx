@@ -18,7 +18,7 @@ class PipelineItem extends Component {
                         <Title>{this.props.title}</Title>
                         <Detail>Branch <span>{this.props.branch}</span></Detail>
                         <Detail>Commit <span>{this.props.commit}</span></Detail>
-                        <Changes>Changes by <span>{this.props.user}</span></Changes>
+                        <Detail>Changes by <span>{this.props.user}</span></Detail>
                     </GeneralWrapper>
 
                     <GeneralWrapper>
@@ -54,6 +54,10 @@ const Pipeline = styled.div`
     justify-content: flex-start;
     align-content: center;
     align-items: center;
+
+    &:first-of-type {
+        margin-top: 108px;
+    }
 `
 
 const GeneralWrapper = styled.div`
@@ -75,7 +79,7 @@ const StatusIcon = styled.div`
 
 const DetailsWrapper = styled.div`
     /* width: calc(100% - 400px); */
-    width: 800px;
+    width: 600px;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -111,29 +115,7 @@ const Title = styled.h1`
 
 const Detail = styled.h1`
     font-family: 'BlenderProBook';
-    font-size: 1.6em;
-    font-weight: 600;
-    text-align: left;
-    /* color: #6441A5; */
-    color: #000;
-    padding: 5px 0;
-
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center; */
-
-    span {
-        margin-left: 20px;
-        font-weight: 100;
-    }
-`
-
-const Changes = styled.h1`
-    font-family: 'BlenderProBook';
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 600;
     text-align: left;
     /* color: #6441A5; */

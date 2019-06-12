@@ -23,6 +23,7 @@ class Menu extends Component {
                 {/* <i className="fas fa-cube"></i> */}
                 <NavigationLink href="/containers" className={this.props.containers ? "item-selected" : null}><i className="fas fa-boxes"></i> Containers</NavigationLink>
                 <NavigationLink href="/images" className={this.props.images ? "item-selected" : null}><i className="fas fa-box-open"></i> Images</NavigationLink>
+                <NavigationLink href="/volumes" className={this.props.images ? "item-selected" : null}><i className="fas fa-folder"></i> Volumes</NavigationLink>
                 {/* <a href="/boards" className={this.props.boards ? "menu-item item-selected" : "menu-item"}><i class="fab fa-trello"></i> Boards</a> */}
                 <NavigationLink href="/settings" className={this.props.settings ? "item-selected" : null}><i className="fas fa-cog"></i> Settings</NavigationLink>
                 <NavigationLink href="" onClick={(e) => this.logout(e)}><i className="fas fa-sign-out-alt"></i> Logout</NavigationLink>
@@ -92,9 +93,15 @@ const Coffee = styled.a`
     font-family: 'BlenderProBook';
     font-size: 1em;
     text-align: center;
+    transition: .2s ease-in-out;
 
     svg {
         margin-right: 5px;
+    }
+
+    &:hover {
+        transition: .2s ease-in-out;
+        opacity: .7;
     }
 `
 

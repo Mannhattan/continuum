@@ -17,3 +17,6 @@ Login page:
 
 Pipelines:
 ![alt text](https://raw.githubusercontent.com/mannhattan/continuum/master/screenshots/2.png)
+
+Containers:
+![alt text](https://raw.githubusercontent.com/mannhattan/continuum/master/screenshots/3.png)

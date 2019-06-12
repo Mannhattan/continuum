@@ -30,7 +30,7 @@ class TopMenu extends Component {
 
 
 const TopMenuWrapper = styled.section`
-    width: 100%;
+    width: calc(100% - 300px);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -38,13 +38,17 @@ const TopMenuWrapper = styled.section`
     align-content: center;
     align-items: center;
 
+    position: fixed;
+    top: 0;
+    right: 0;
+
     background: #fff;
     z-index: 3;
     /* border-bottom: 2px solid #e0e0e0; */
     box-shadow: 0 0px 10px rgba(0,0,0,0.14);
 `
 
-const TitleWrapper = styled.section`
+const TitleWrapper = styled.div`
     width: calc(100% - 250px);
     display: flex;
     flex-direction: row;
@@ -75,7 +79,7 @@ const ProfileWrapper = styled.div`
     align-items: center;
 
     border-left: 2px solid #e0e0e0;
-    padding: 0 20px;
+    padding: 0 15px;
 `
 
 const ProfileAvatar = styled.img`
