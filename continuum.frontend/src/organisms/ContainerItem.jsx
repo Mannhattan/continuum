@@ -24,7 +24,7 @@ class ContainerItem extends Component {
                 <ColumnItem width="15%">{this.props.ports}</ColumnItem>
 
                 <Actions>
-                    <ActionItem title="Start container"><i className="fas fa-play"></i></ActionItem>
+                    {this.props.state == "Running" ? <ActionItem title="Stop container"><i className="fas fa-stop"></i></ActionItem> : <ActionItem title="Start container"><i className="fas fa-play"></i></ActionItem>}
                     <ActionItem title="Exec to container"><i className="fas fa-terminal"></i></ActionItem>
                     <ActionItem title="Restart container"><i className="fas fa-sync"></i></ActionItem>
                     <ActionItem title="Delete container"><i className="far fa-trash-alt"></i></ActionItem>

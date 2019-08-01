@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import Button from './../atoms/Button';
 import Menu from './../organisms/Menu.jsx';
 import TopMenu from './../organisms/TopMenu.jsx';
 import ContainerItem from './../organisms/ContainerItem.jsx';
@@ -113,6 +114,13 @@ class Containers extends Component {
                 <SectionContent>
                     <TopMenu title="Containers" profileName="mannhattan" button="Add new container" />
 
+                    <Actions>
+                      <Button primary margin="0 10px 0 0">Start</Button>
+                      <Button primary margin="0 10px 0 0">Stop</Button>
+                      <Button primary margin="0 10px 0 0">Restart</Button>
+                      <Button primary margin="0">Remove</Button>
+                    </Actions>
+
                     <ListHeader>
                         <ColumnTitle width="15%">Name</ColumnTitle>
                         <ColumnTitle width="130px">State</ColumnTitle>
@@ -135,10 +143,25 @@ class Containers extends Component {
 
 
 
+const Actions = styled.div`
+	width: calc(100% - 60px);
+	height: 50px;
+	margin: 98px 30px 0 30px;
+	border-radius: 5px;
+	/* border: 2px solid #e0e0e0; */
+
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+`
+
 const ListHeader = styled.div`
     width: calc(100% - 60px);
     height: 50px;
-    margin: 98px 30px 0 30px;
+    margin: 18px 30px 0 30px;
 
     display: flex;
     flex-direction: row;
